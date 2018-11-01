@@ -185,11 +185,14 @@ Resources:
         - AWSXrayWriteOnlyAccess
         - DynamoDBCrudPolicy:
             TableName: !Ref table6E08C5D
+        - AWSSecretsManagerGetSecretValuePolicy:
+            SecretArn: !Sub arn:${AWS::Partition}:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:/${StackeryEnvironmentTagName}/*
       Environment:
         Variables:
           TABLE_NAME: !Ref table6E08C5D
           TABLE_ARN: !GetAtt table6E08C5D.Arn
           FOO: !Ref StackeryEnvConfigdbPasswordAsString
+          SECRETS_NAMESPACE: !Sub /${StackeryEnvironmentTagName}/
       Events:
         api3FEE112A:
           Type: Api
