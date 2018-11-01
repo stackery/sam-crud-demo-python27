@@ -189,6 +189,7 @@ Resources:
         Variables:
           TABLE_NAME: !Ref table6E08C5D
           TABLE_ARN: !GetAtt table6E08C5D.Arn
+          FOO: !Ref StackeryEnvConfigdbPasswordAsString
       Events:
         api3FEE112A:
           Type: Api
@@ -225,3 +226,9 @@ Parameters:
   StackeryEnvironmentAPIGatewayStageName:
     Type: String
     Description: Environment name used for API Gateway Stage names (injected by Stackery at deployment time)
+  StackeryEnvConfigdbPasswordAsString:
+    Type: AWS::SSM::Parameter::Value<String>
+    Default: /Stackery/Environments/<StackeryEnvId>/Config/dbPassword
+Metadata:
+  StackeryEnvConfigParameters:
+    StackeryEnvConfigdbPasswordAsString: dbPassword
