@@ -18,19 +18,25 @@ Here is an overview of the files:
 ├── src                                <-- Source code dir for all AWS Lambda functions
 │   ├── createUser                     <-- Source code dir for createUser function
 │   │   ├── requirements.txt           <-- Build dependencies for createUser
-│   |   └── handler.py                 <-- Lambda createUser function code 
+│   │   ├── .stackery-config.yaml      <-- Default CLI parameters for this directory
+│   |   └── handler.py                 <-- Lambda createUser function code
 │   ├── getUser                        <-- Source code dir for getUser function
 │   │   ├── requirements.txt           <-- Build dependencies for getUser
-│   |   └── handler.py                 <-- Lambda getUser function code 
+│   │   ├── .stackery-config.yaml      <-- Default CLI parameters for this directory
+│   |   └── handler.py                 <-- Lambda getUser function code
 │   ├── updateUser                     <-- Source code dir for updateUser function
 │   │   ├── requirements.txt           <-- Build dependencies for updateUser
-│   |   └── handler.py                 <-- Lambda updateUser function code 
+│   │   ├── .stackery-config.yaml      <-- Default CLI parameters for this directory
+│   |   └── handler.py                 <-- Lambda updateUser function code
 │   ├── deleteUser                     <-- Source code dir for deleteUser function
 │   │   ├── requirements.txt           <-- Build dependencies for deleteUser
-│   |   └── handler.py                 <-- Lambda deleteUser function code 
+│   │   ├── .stackery-config.yaml      <-- Default CLI parameters for this directory
+│   |   └── handler.py                 <-- Lambda deleteUser function code
 │   └── listUsers                      <-- Source code dir for listUsers function
-│   │   ├── requirements.txt           <-- Build dependencies for listUsers
-│   |   └── handler.py                 <-- Lambda deleteUser function code listUsers
+│       ├── requirements.txt           <-- Build dependencies for listUsers
+│       ├── .stackery-config.yaml      <-- Default CLI parameters for this directory
+│       └── handler.py                 <-- Lambda deleteUser function code listUsers
+├── .stackery-config.yaml              <-- Default CLI parameters for root directory
 └── template.yaml                      <-- SAM infrastructure-as-code template
 ```
 
